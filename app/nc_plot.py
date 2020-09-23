@@ -5,6 +5,10 @@ from bokeh.models.widgets import Panel, Tabs, Div, Button, Slider
 from bokeh.plotting import figure
 from json2html import *
 
+"""[ License:
+     This file is part of the NorDataNet adcplot repository (https://github.com/NorDataNet/adcplot).
+     NorDataNet adcplot is licensed under GPL-3.0 (https://github.com/NorDataNet/adcplot/blob/master/LICENSE)]
+"""
 
 def create_ts_plot(data):
     data['tooltip'] = [x.strftime("%Y-%m-%d %H:%M:%S") for x in data.index]

@@ -2,6 +2,11 @@ from app.nc_transform import get_plottable_variables, get_plottable_data, get_nc
 
 from fastapi import HTTPException
 
+"""[ License:
+     This file is part of the NorDataNet adcplot repository (https://github.com/NorDataNet/adcplot).
+     NorDataNet adcplot is licensed under GPL-3.0 (https://github.com/NorDataNet/adcplot/blob/master/LICENSE)]
+"""
+
 
 def get_variables(resource_url):
     try:

@@ -3,6 +3,11 @@ import pandas as pd
 import xarray as xr
 from netCDF4 import Dataset
 
+"""[ License:
+     This file is part of the NorDataNet adcplot repository (https://github.com/NorDataNet/adcplot).
+     NorDataNet adcplot is licensed under GPL-3.0 (https://github.com/NorDataNet/adcplot/blob/master/LICENSE)]
+"""
+
 def get_valid_vars(nc_url):
     var_list = []
     nc_fid = Dataset(nc_url, 'r')

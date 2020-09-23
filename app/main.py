@@ -37,7 +37,10 @@ from fastapi.templating import Jinja2Templates
 from starlette.responses import RedirectResponse
 from fastapi import HTTPException
 
-
+"""[ License:
+     This file is part of the NorDataNet adcplot repository (https://github.com/NorDataNet/adcplot).
+     NorDataNet adcplot is licensed under GPL-3.0 (https://github.com/NorDataNet/adcplot/blob/master/LICENSE)]
+"""
 
 def getstaticfolder():
     current_file = Path(__file__)

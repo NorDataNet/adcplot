@@ -26,9 +26,12 @@ Note: you may nedd root privileges depending on how your docker settings.
 Once the service is running, assuming a NetCDF resource is available at `resource_url`:
 
 * Get list of variables from a NetCDF resource
-    http://localhost:7000/adcplot/plot?get=param&resource_url=resource_url
+
+    - http://localhost:7000/adcplot/plot?get=param&resource_url=resource_url
+
 * Get the bokeh plot of a selected variable embedded in a html div `tsplot`
-    http://localhost:7000/adcplot/plot?get=plot&resource_url=resource_url&variable=variable_name&axis=axis_name
+
+    - http://localhost:7000/adcplot/plot?get=plot&resource_url=resource_url&variable=variable_name&axis=axis_name
 
 
 Example using the built-in example data served via hyrax opendap server:
@@ -49,7 +52,9 @@ which will return the following json:
            "relative_humidity"]}
 ```
 
-To get a json object that can be embeded in a html div named tsplot
+To get a `json` object that can be embeded in a html div named tsplot:
+
 http://localhost:7000/adcplot/plot?get=plot&resource_url=http://hyrax:8080/opendap/SN99938.nc&variable=air_pressure_at_sea_level&axis=y_axis
 
 To test the plotting widget is possible to code the API call into an HTML file using `fetch`, see [example](app/static/index.html).
+

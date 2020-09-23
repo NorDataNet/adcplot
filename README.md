@@ -17,7 +17,7 @@ apt-get install docker-io docker-compose
 To start the service, clone this repository and execute the docker-compose instruction:
 
 ```
-git clone repo
+git clone https://github.com/NorDataNet/adcplot
 cd adcplot
 docker-compose up
 ```

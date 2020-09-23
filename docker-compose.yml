@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+  ncplot:
+    container_name: metsis_fastapi
+    image: epinux/metsis-fastapi
+    environment:
+      # TODO:
+      # needs a better solution, some hints:
+      # https://stackoverflow.com/questions/25862071/accessing-os-environment-variables-from-jinja2-template
+      # changing theurl below affects the download.html template
+      DOWNLOAD_DIR: "/app/static/download"
+    ports:
+      - "7000:80"
+    restart: always
+    volumes:
+      - ./app:/app
+
+  hyrax:
+    container_name: metsis_hyrax
+    image: epinux/metsis-hyrax
+    ports:
+      - "9090:8080"
+    volumes:
+      - ./data:/usr/share/hyrax
+    restart: always
+
